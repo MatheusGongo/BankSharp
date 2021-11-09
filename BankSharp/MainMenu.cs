@@ -66,5 +66,10 @@ namespace BankSharp
         {
 
         }
+
+        private void addMoney_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

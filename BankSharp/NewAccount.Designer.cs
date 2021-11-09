@@ -32,14 +32,14 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.AcName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.birthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.AcCpf = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.AcCep = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -83,13 +83,14 @@
             this.label2.TabIndex = 35;
             this.label2.Text = "Abra a sua conta para poder usufruir dos recursos e promoções do BankSharp.";
             // 
-            // textBox1
+            // AcName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(144, 147);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(592, 29);
-            this.textBox1.TabIndex = 36;
+            this.AcName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AcName.Location = new System.Drawing.Point(144, 147);
+            this.AcName.Name = "AcName";
+            this.AcName.Size = new System.Drawing.Size(592, 29);
+            this.AcName.TabIndex = 36;
+            this.AcName.TextChanged += new System.EventHandler(this.AcName_TextChanged);
             // 
             // label1
             // 
@@ -111,22 +112,23 @@
             this.label3.TabIndex = 38;
             this.label3.Text = "Data de nascimento";
             // 
-            // guna2DateTimePicker1
+            // birthday
             // 
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(418, 221);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(259, 29);
-            this.guna2DateTimePicker1.TabIndex = 40;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 11, 7, 19, 51, 17, 894);
+            this.birthday.Checked = true;
+            this.birthday.CheckedState.Parent = this.birthday;
+            this.birthday.FillColor = System.Drawing.Color.White;
+            this.birthday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.birthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.birthday.HoverState.Parent = this.birthday;
+            this.birthday.Location = new System.Drawing.Point(418, 221);
+            this.birthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.birthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.birthday.Name = "birthday";
+            this.birthday.ShadowDecoration.Parent = this.birthday;
+            this.birthday.Size = new System.Drawing.Size(259, 29);
+            this.birthday.TabIndex = 40;
+            this.birthday.Value = new System.DateTime(2021, 11, 7, 19, 51, 17, 894);
+            this.birthday.ValueChanged += new System.EventHandler(this.birthday_ValueChanged);
             // 
             // label5
             // 
@@ -138,13 +140,14 @@
             this.label5.TabIndex = 42;
             this.label5.Text = "CPF";
             // 
-            // textBox2
+            // AcCpf
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(144, 222);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(251, 29);
-            this.textBox2.TabIndex = 41;
+            this.AcCpf.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AcCpf.Location = new System.Drawing.Point(144, 222);
+            this.AcCpf.Name = "AcCpf";
+            this.AcCpf.Size = new System.Drawing.Size(251, 29);
+            this.AcCpf.TabIndex = 41;
+            this.AcCpf.TextChanged += new System.EventHandler(this.AcCpf_TextChanged);
             // 
             // label6
             // 
@@ -156,13 +159,14 @@
             this.label6.TabIndex = 44;
             this.label6.Text = "CEP";
             // 
-            // textBox3
+            // AcCep
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(143, 308);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(251, 29);
-            this.textBox3.TabIndex = 43;
+            this.AcCep.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AcCep.Location = new System.Drawing.Point(143, 308);
+            this.AcCep.Name = "AcCep";
+            this.AcCep.Size = new System.Drawing.Size(251, 29);
+            this.AcCep.TabIndex = 43;
+            this.AcCep.TextChanged += new System.EventHandler(this.AcCep_TextChanged);
             // 
             // label7
             // 
@@ -274,13 +278,13 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.AcCep);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.guna2DateTimePicker1);
+            this.Controls.Add(this.AcCpf);
+            this.Controls.Add(this.birthday);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.AcName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.guna2Panel1);
@@ -298,14 +302,14 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox AcName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker birthday;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox AcCpf;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox AcCep;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label8;
