@@ -19,5 +19,11 @@ Matheus Gongo de Souza
 \
 Alef Machado
 
+
+## Atualização 10/11/2021
+
+Foi criado a consulta da classe Account para poder retornar detalhes do usuário quando for realizado o login no sistema.
+Adicionado método Get e Set para manipular a informação do usuário.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
