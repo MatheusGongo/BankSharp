@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.loginInput = new System.Windows.Forms.TextBox();
+            this.passInput = new System.Windows.Forms.TextBox();
             this.Entrar = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,26 +48,27 @@
             this.panel1.Size = new System.Drawing.Size(135, 412);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
+            // loginInput
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(176, 137);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(283, 35);
-            this.textBox1.TabIndex = 4;
+            this.loginInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.loginInput.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginInput.ForeColor = System.Drawing.Color.Black;
+            this.loginInput.Location = new System.Drawing.Point(176, 137);
+            this.loginInput.Name = "loginInput";
+            this.loginInput.Size = new System.Drawing.Size(283, 35);
+            this.loginInput.TabIndex = 4;
+            this.loginInput.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
-            // textBox2
+            // passInput
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(176, 230);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(283, 35);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.passInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passInput.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passInput.ForeColor = System.Drawing.Color.Black;
+            this.passInput.Location = new System.Drawing.Point(176, 230);
+            this.passInput.Name = "passInput";
+            this.passInput.Size = new System.Drawing.Size(283, 35);
+            this.passInput.TabIndex = 5;
+            this.passInput.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Entrar
             // 
@@ -88,6 +89,7 @@
             this.Entrar.Size = new System.Drawing.Size(283, 45);
             this.Entrar.TabIndex = 6;
             this.Entrar.Text = "Entrar";
+            this.Entrar.Click += new System.EventHandler(this.Entrar_Click);
             // 
             // label1
             // 
@@ -165,8 +167,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Entrar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passInput);
+            this.Controls.Add(this.loginInput);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
@@ -180,8 +182,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox loginInput;
+        private System.Windows.Forms.TextBox passInput;
         private Guna.UI2.WinForms.Guna2Button Entrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

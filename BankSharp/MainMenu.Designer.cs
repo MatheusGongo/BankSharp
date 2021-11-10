@@ -66,7 +66,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.userName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.cards.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -761,15 +761,16 @@
             this.label7.TabIndex = 36;
             this.label7.Text = "Pague os seus boletos usando o código de barras.";
             // 
-            // label8
+            // userName
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(698, 89);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 21);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Matheus Gongo";
+            this.userName.AutoSize = true;
+            this.userName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userName.Location = new System.Drawing.Point(698, 89);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(127, 21);
+            this.userName.TabIndex = 37;
+            this.userName.Text = "Matheus Gongo";
+            this.userName.Click += new System.EventHandler(this.userName_Click);
             // 
             // MainMenu
             // 
@@ -777,7 +778,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(912, 578);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.userName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -856,6 +857,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label userName;
     }
 }

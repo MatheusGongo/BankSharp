@@ -154,6 +154,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserDetails.cs" />
     <Compile Include="NewAccount.cs">
       <SubType>Form</SubType>
     </Compile>

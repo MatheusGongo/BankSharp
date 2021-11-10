@@ -35,21 +35,21 @@
             this.AcName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.birthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.AcBirthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.AcCpf = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.AcCep = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.AcAddress = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.AcEmail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.AcPhone = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.AcPass = new System.Windows.Forms.TextBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnForm = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -112,23 +112,23 @@
             this.label3.TabIndex = 38;
             this.label3.Text = "Data de nascimento";
             // 
-            // birthday
+            // AcBirthday
             // 
-            this.birthday.Checked = true;
-            this.birthday.CheckedState.Parent = this.birthday;
-            this.birthday.FillColor = System.Drawing.Color.White;
-            this.birthday.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.birthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.birthday.HoverState.Parent = this.birthday;
-            this.birthday.Location = new System.Drawing.Point(418, 221);
-            this.birthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.birthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.birthday.Name = "birthday";
-            this.birthday.ShadowDecoration.Parent = this.birthday;
-            this.birthday.Size = new System.Drawing.Size(259, 29);
-            this.birthday.TabIndex = 40;
-            this.birthday.Value = new System.DateTime(2021, 11, 7, 19, 51, 17, 894);
-            this.birthday.ValueChanged += new System.EventHandler(this.birthday_ValueChanged);
+            this.AcBirthday.Checked = true;
+            this.AcBirthday.CheckedState.Parent = this.AcBirthday;
+            this.AcBirthday.FillColor = System.Drawing.Color.White;
+            this.AcBirthday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AcBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.AcBirthday.HoverState.Parent = this.AcBirthday;
+            this.AcBirthday.Location = new System.Drawing.Point(418, 221);
+            this.AcBirthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.AcBirthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.AcBirthday.Name = "AcBirthday";
+            this.AcBirthday.ShadowDecoration.Parent = this.AcBirthday;
+            this.AcBirthday.Size = new System.Drawing.Size(259, 29);
+            this.AcBirthday.TabIndex = 40;
+            this.AcBirthday.Value = new System.DateTime(2021, 11, 7, 19, 51, 17, 894);
+            this.AcBirthday.ValueChanged += new System.EventHandler(this.AcBirthday_ValueChanged);
             // 
             // label5
             // 
@@ -178,13 +178,14 @@
             this.label7.TabIndex = 46;
             this.label7.Text = "Endereço";
             // 
-            // textBox4
+            // AcAddress
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(416, 308);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(320, 29);
-            this.textBox4.TabIndex = 45;
+            this.AcAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AcAddress.Location = new System.Drawing.Point(416, 308);
+            this.AcAddress.Name = "AcAddress";
+            this.AcAddress.Size = new System.Drawing.Size(320, 29);
+            this.AcAddress.TabIndex = 45;
+            this.AcAddress.TextChanged += new System.EventHandler(this.AcAddress_TextChanged);
             // 
             // label8
             // 
@@ -196,13 +197,14 @@
             this.label8.TabIndex = 48;
             this.label8.Text = "Email";
             // 
-            // textBox5
+            // AcEmail
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(143, 384);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(275, 29);
-            this.textBox5.TabIndex = 47;
+            this.AcEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AcEmail.Location = new System.Drawing.Point(143, 384);
+            this.AcEmail.Name = "AcEmail";
+            this.AcEmail.Size = new System.Drawing.Size(275, 29);
+            this.AcEmail.TabIndex = 47;
+            this.AcEmail.TextChanged += new System.EventHandler(this.AcEmail_TextChanged);
             // 
             // label9
             // 
@@ -215,14 +217,14 @@
             this.label9.Text = "Telefone";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // textBox6
+            // AcPhone
             // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(444, 384);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(292, 29);
-            this.textBox6.TabIndex = 49;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.AcPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AcPhone.Location = new System.Drawing.Point(444, 384);
+            this.AcPhone.Name = "AcPhone";
+            this.AcPhone.Size = new System.Drawing.Size(292, 29);
+            this.AcPhone.TabIndex = 49;
+            this.AcPhone.TextChanged += new System.EventHandler(this.AcPhone_TextChanged);
             // 
             // label10
             // 
@@ -234,33 +236,35 @@
             this.label10.TabIndex = 52;
             this.label10.Text = "Sua senha";
             // 
-            // textBox7
+            // AcPass
             // 
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(143, 462);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(275, 29);
-            this.textBox7.TabIndex = 51;
+            this.AcPass.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AcPass.Location = new System.Drawing.Point(143, 462);
+            this.AcPass.Name = "AcPass";
+            this.AcPass.Size = new System.Drawing.Size(275, 29);
+            this.AcPass.TabIndex = 51;
+            this.AcPass.TextChanged += new System.EventHandler(this.AcPass_TextChanged);
             // 
-            // guna2Button1
+            // btnForm
             // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(73)))), ((int)(((byte)(245)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(351, 527);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 53;
-            this.guna2Button1.Text = "Cadastrar";
+            this.btnForm.CheckedState.Parent = this.btnForm;
+            this.btnForm.CustomImages.Parent = this.btnForm;
+            this.btnForm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnForm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnForm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnForm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnForm.DisabledState.Parent = this.btnForm;
+            this.btnForm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(73)))), ((int)(((byte)(245)))));
+            this.btnForm.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForm.ForeColor = System.Drawing.Color.White;
+            this.btnForm.HoverState.Parent = this.btnForm;
+            this.btnForm.Location = new System.Drawing.Point(351, 527);
+            this.btnForm.Name = "btnForm";
+            this.btnForm.ShadowDecoration.Parent = this.btnForm;
+            this.btnForm.Size = new System.Drawing.Size(180, 45);
+            this.btnForm.TabIndex = 53;
+            this.btnForm.Text = "Cadastrar";
+            this.btnForm.Click += new System.EventHandler(this.btnForm_Click);
             // 
             // NewAccount
             // 
@@ -268,20 +272,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 600);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnForm);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.AcPass);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.AcPhone);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.AcEmail);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.AcAddress);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.AcCep);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.AcCpf);
-            this.Controls.Add(this.birthday);
+            this.Controls.Add(this.AcBirthday);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AcName);
@@ -305,20 +309,20 @@
         private System.Windows.Forms.TextBox AcName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2DateTimePicker birthday;
+        private Guna.UI2.WinForms.Guna2DateTimePicker AcBirthday;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox AcCpf;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox AcCep;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox AcAddress;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox AcEmail;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox AcPhone;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox AcPass;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnForm;
     }
 }
