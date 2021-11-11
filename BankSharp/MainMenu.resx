@@ -3564,23 +3564,10 @@
   <metadata name="guna2Elipse3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>289, 13</value>
   </metadata>
-  <data name="guna2ImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAZ5JREFUeF7t
-        3LFq5DAARdH5zJBqfzwsKcKW+YSs1VtNMJLNPQdeM8UMjK87oRcAAAAAAAAAPMvbsT8X7f0YD/Nx7Oei
-        fR7jYQQQJ4A4AcQJIE4AcQKIE0CcAOIEECeAOAHECSBOAHECiBNAnADiBBAngDgBxAkgTgBxAogTQJwA
-        4gQQJ4A4AcQJIE4AcQKIE0CcAOIEECeAOAHECSBOAAuMq9jGH33HfR37vmjju/7edOMZbDPu0Dt7Y+6w
-        8eDOPv/NrvyuqzeewTYC2D8BTCaABQSwfwKYTAALCGD/BDCZABYQwP4JYDIBLCCA/RPAZAJYQAD7J4DJ
-        BLCAAPZPAJMJYAEB7J8AJhPAAgLYv60BjONIZ8eU7rArj4T9O3b2G3fY1iNhdzbOBZ69Mb+ZQ6EPJIA4
-        AcQJIE4AcQKIE0CcAOIEECeAOAHECSBOAHECiBNAnADiBBAngDgBxAkgTgBxAogTQJwA4gQQJ4A4AcQJ
-        IE4AcQKIE0CcAOIEECeAOAHECSBOAHECiBvXp4079K6Yq9gAAAAAAAAAeI7X6z8jA1XkBzT/gwAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="guna2ImageButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="to_payment.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        hgAAC4YBQQdltwAACFpJREFUeF7t1juuHUUYRtErEdk4s0RMwFAZCn7MAZvXCEgYAQOBOpZKcnBk+dF9
+        gwAAC4MBbL0AQQAACFpJREFUeF7t1juuHUUYRtErEdk4s0RMwFAZCn7MAZvXCEgYAQOBOpZKcnBk+dF9
         urr3WtIfVFbZ/p4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYHkvx/08

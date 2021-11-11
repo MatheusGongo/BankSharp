@@ -62,25 +62,53 @@ namespace BankSharp
             else
             {
                
-                Con.Open();
+                /*Con.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("select count(*) from AccountTbl where email='" + loginInput.Text + "' and password='" + passInput.Text + "'", Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
-                if (dt.Rows[0][0].ToString() == "1")
-                {
-                    UserDetails.Username = "asdgasdgasdg";
+
+                /*if (dt.Rows[0][0].ToString() == "1") { 
+                    UserDetails.Username = dt.Rows[0][2].ToString();
                     MainMenu obj = new MainMenu();
                     obj.Show();
                     this.Hide();
                     Con.Close();
-                }
-                else
+                }*/
+
+
+                SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okumu\OneDrive\Documents\BankSharp.mdf;Integrated Security=True;Connect Timeout=30");
+                SqlCommand command = new SqlCommand("SELECT name FROM AccountTbl WHERE email=@email and password=@pass", conn);
+                //SqlCommand commandEmail = new SqlCommand("SELECT email FROM AccountTbl WHERE email=@email and password=@pass", conn);
+
+                command.Parameters.AddWithValue("@email", loginInput.Text);
+                command.Parameters.AddWithValue("@pass", passInput.Text);
+
+                /*commandEmail.Parameters.AddWithValue("@email", loginInput.Text);
+                commandEmail.Parameters.AddWithValue("@pass", passInput.Text);*/
+
+                conn.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    MessageBox.Show("Senha ou login errados");
-                    loginInput.Text = "";
-                    passInput.Text = "";
+                    if (reader.Read())
+                    {
+                        UserDetails.Username = reader.GetValue(0).ToString();
+                        MainMenu obj = new MainMenu();
+                        obj.Show();
+                        this.Hide();
+                        conn.Close();
+                    }
                 }
-                Con.Close();
+
+                /*using (SqlDataReader reader = commandEmail.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        UserDetails.Useremail = reader.GetValue(1).ToString();
+                    }
+                }*/
+
+
 
             }
 

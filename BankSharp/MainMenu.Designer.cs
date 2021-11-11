@@ -42,9 +42,8 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox9 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.addMoney = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.to_payment = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox13 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox14 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -299,25 +298,6 @@
             this.guna2TextBox9.TabIndex = 10;
             this.guna2TextBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(24, 24);
-            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(24, 24);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(319, 345);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(24, 24);
-            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.ShadowDecoration.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(64, 54);
-            this.guna2ImageButton1.TabIndex = 11;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
-            // 
             // addMoney
             // 
             this.addMoney.CheckedState.Parent = this.addMoney;
@@ -339,23 +319,24 @@
             this.addMoney.Text = "+ Adicionar dinheiro";
             this.addMoney.Click += new System.EventHandler(this.addMoney_Click);
             // 
-            // guna2ImageButton2
+            // to_payment
             // 
-            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.CheckedState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
-            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(408, 490);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.ShadowDecoration.Parent = this.guna2ImageButton2;
-            this.guna2ImageButton2.Size = new System.Drawing.Size(36, 54);
-            this.guna2ImageButton2.TabIndex = 15;
+            this.to_payment.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.to_payment.CheckedState.Parent = this.to_payment;
+            this.to_payment.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.to_payment.HoverState.Parent = this.to_payment;
+            this.to_payment.Image = ((System.Drawing.Image)(resources.GetObject("to_payment.Image")));
+            this.to_payment.ImageOffset = new System.Drawing.Point(0, 0);
+            this.to_payment.ImageRotate = 0F;
+            this.to_payment.ImageSize = new System.Drawing.Size(34, 34);
+            this.to_payment.Location = new System.Drawing.Point(408, 490);
+            this.to_payment.Name = "to_payment";
+            this.to_payment.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.to_payment.PressedState.Parent = this.to_payment;
+            this.to_payment.ShadowDecoration.Parent = this.to_payment;
+            this.to_payment.Size = new System.Drawing.Size(36, 54);
+            this.to_payment.TabIndex = 15;
+            this.to_payment.Click += new System.EventHandler(this.to_payment_Click);
             // 
             // guna2TextBox13
             // 
@@ -801,9 +782,8 @@
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2TextBox13);
             this.Controls.Add(this.addMoney);
-            this.Controls.Add(this.guna2ImageButton2);
+            this.Controls.Add(this.to_payment);
             this.Controls.Add(this.guna2TextBox9);
-            this.Controls.Add(this.guna2ImageButton1);
             this.Controls.Add(this.guna2TextBox8);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.cards);
@@ -828,12 +808,11 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox8;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox9;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox10;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2Button addMoney;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
+        private Guna.UI2.WinForms.Guna2ImageButton to_payment;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox20;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox19;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox13;

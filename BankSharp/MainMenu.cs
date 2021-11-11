@@ -77,5 +77,12 @@ namespace BankSharp
         {
 
         }
+
+        private void to_payment_Click(object sender, EventArgs e)
+        {
+            Payment obj = new Payment();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

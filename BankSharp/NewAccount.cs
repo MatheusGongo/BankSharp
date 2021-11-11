@@ -75,6 +75,8 @@ namespace BankSharp
             } else
             {
                 try{
+                    SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okumu\OneDrive\Documents\BankSharp.mdf;Integrated Security=True;Connect Timeout=30");
+
                     Con.Open();
                     SqlCommand cmd = new SqlCommand("Insert into AccountTbl(name,cpf,birthday,cep,address,email,phone,password)values(@name,@cpf,@birthday,@cep,@address,@email,@phone,@password)", Con);
                     cmd.Parameters.AddWithValue("@name", AcName.Text);
@@ -88,6 +90,11 @@ namespace BankSharp
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Conta criada com sucesso :D");
                     Con.Close();
+                    NewClient obj = new NewClient();
+                    obj.Show();
+                    this.Hide();
+
+
                 }
                 catch (Exception Ex)
                 {
