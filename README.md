@@ -25,5 +25,11 @@ Alef Machado
 Foi criado a consulta da classe Account para poder retornar detalhes do usuário quando for realizado o login no sistema.
 Adicionado método Get e Set para manipular a informação do usuário.
 
+
+
+## Atualização 11/11/2021
+
+Foi criado a consulta da classe BankAccount para poder retornar detalhes do banco que o cliente está cadastrado.
+Adicionado fluxo de pagamento.
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
