@@ -22,6 +22,8 @@ NewClient
 Payment
 \
 Transfer
+\
+UserDetails
 
 
 
