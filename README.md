@@ -9,9 +9,20 @@ Este projeto tem como fundamento em ser um banco virtual, com a capacidade do us
 
 **Classes**
 
-Cliente
+Splash
 \
-Banco
+Login
+\
+MainMenu
+\
+NewAccount
+\
+NewClient
+\
+Payment
+\
+Transfer
+
 
 
 ## Membros
