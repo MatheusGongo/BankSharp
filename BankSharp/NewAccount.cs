@@ -13,13 +13,11 @@ namespace BankSharp
 {
     public partial class NewAccount : Form
     {
-        public NewAccount()
+        public 
+            NewAccount()
         {
             InitializeComponent();
         }
-
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okumu\OneDrive\Documents\BankSharp.mdf;Integrated Security=True;Connect Timeout=30");
-
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -88,6 +86,9 @@ namespace BankSharp
                     cmd.Parameters.AddWithValue("@phone", AcPhone.Text);
                     cmd.Parameters.AddWithValue("@password", AcPass.Text);
                     cmd.ExecuteNonQuery();
+
+                    UserDetails.Email = AcEmail.Text;
+                    UserDetails.Password = AcPass.Text;
                     MessageBox.Show("Conta criada com sucesso :D");
                     Con.Close();
                     NewClient obj = new NewClient();

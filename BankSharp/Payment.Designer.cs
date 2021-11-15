@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Payment));
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.codeBar = new Guna.UI2.WinForms.Guna2TextBox();
             this.saldoConta = new Guna.UI2.WinForms.Guna2RadioButton();
             this.saldoCartao = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
+            this.toPay = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.confirm_payment = new Guna.UI2.WinForms.Guna2Button();
+            this.verifyCode = new Guna.UI2.WinForms.Guna2Button();
+            this.toMain = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +59,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(73)))), ((int)(((byte)(245)))));
+            this.guna2Panel1.Controls.Add(this.toMain);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -86,16 +90,19 @@
             this.codeBar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.codeBar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.codeBar.FocusedState.Parent = this.codeBar;
-            this.codeBar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.codeBar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codeBar.ForeColor = System.Drawing.Color.Black;
             this.codeBar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.codeBar.HoverState.Parent = this.codeBar;
             this.codeBar.Location = new System.Drawing.Point(40, 118);
+            this.codeBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.codeBar.Name = "codeBar";
             this.codeBar.PasswordChar = '\0';
+            this.codeBar.PlaceholderForeColor = System.Drawing.Color.Black;
             this.codeBar.PlaceholderText = "";
             this.codeBar.SelectedText = "";
             this.codeBar.ShadowDecoration.Parent = this.codeBar;
-            this.codeBar.Size = new System.Drawing.Size(470, 34);
+            this.codeBar.Size = new System.Drawing.Size(396, 45);
             this.codeBar.TabIndex = 40;
             // 
             // saldoConta
@@ -134,15 +141,14 @@
             this.saldoCartao.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.saldoCartao.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
-            // label4
+            // toPay
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(32, 199);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 37);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "R$ 8.000,00";
+            this.toPay.AutoSize = true;
+            this.toPay.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toPay.Location = new System.Drawing.Point(32, 199);
+            this.toPay.Name = "toPay";
+            this.toPay.Size = new System.Drawing.Size(0, 37);
+            this.toPay.TabIndex = 45;
             // 
             // label3
             // 
@@ -187,15 +193,55 @@
             this.confirm_payment.Text = "Pagar";
             this.confirm_payment.Click += new System.EventHandler(this.confirm_payment_Click);
             // 
+            // verifyCode
+            // 
+            this.verifyCode.CheckedState.Parent = this.verifyCode;
+            this.verifyCode.CustomImages.Parent = this.verifyCode;
+            this.verifyCode.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.verifyCode.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.verifyCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.verifyCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.verifyCode.DisabledState.Parent = this.verifyCode;
+            this.verifyCode.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(73)))), ((int)(((byte)(245)))));
+            this.verifyCode.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verifyCode.ForeColor = System.Drawing.Color.White;
+            this.verifyCode.HoverState.Parent = this.verifyCode;
+            this.verifyCode.Location = new System.Drawing.Point(442, 118);
+            this.verifyCode.Name = "verifyCode";
+            this.verifyCode.ShadowDecoration.Parent = this.verifyCode;
+            this.verifyCode.Size = new System.Drawing.Size(90, 45);
+            this.verifyCode.TabIndex = 49;
+            this.verifyCode.Text = "Verificar";
+            this.verifyCode.Click += new System.EventHandler(this.verifyCode_Click);
+            // 
+            // toMain
+            // 
+            this.toMain.CheckedState.Parent = this.toMain;
+            this.toMain.HoverState.ImageSize = new System.Drawing.Size(19, 19);
+            this.toMain.HoverState.Parent = this.toMain;
+            this.toMain.Image = ((System.Drawing.Image)(resources.GetObject("toMain.Image")));
+            this.toMain.ImageOffset = new System.Drawing.Point(0, 0);
+            this.toMain.ImageRotate = 0F;
+            this.toMain.ImageSize = new System.Drawing.Size(20, 20);
+            this.toMain.Location = new System.Drawing.Point(28, 19);
+            this.toMain.Name = "toMain";
+            this.toMain.PressedState.ImageSize = new System.Drawing.Size(19, 19);
+            this.toMain.PressedState.Parent = this.toMain;
+            this.toMain.ShadowDecoration.Parent = this.toMain;
+            this.toMain.Size = new System.Drawing.Size(20, 20);
+            this.toMain.TabIndex = 50;
+            this.toMain.Click += new System.EventHandler(this.toMain_Click);
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 451);
+            this.Controls.Add(this.verifyCode);
             this.Controls.Add(this.confirm_payment);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.toPay);
             this.Controls.Add(this.saldoCartao);
             this.Controls.Add(this.saldoConta);
             this.Controls.Add(this.codeBar);
@@ -220,9 +266,11 @@
         private Guna.UI2.WinForms.Guna2TextBox codeBar;
         private Guna.UI2.WinForms.Guna2RadioButton saldoConta;
         private Guna.UI2.WinForms.Guna2RadioButton saldoCartao;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label toPay;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button confirm_payment;
+        private Guna.UI2.WinForms.Guna2Button verifyCode;
+        private Guna.UI2.WinForms.Guna2ImageButton toMain;
     }
 }

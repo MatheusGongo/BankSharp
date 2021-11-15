@@ -16,41 +16,19 @@ namespace BankSharp
         public Login()
         {
             InitializeComponent();
-        }
-
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okumu\OneDrive\Documents\BankSharp.mdf;Integrated Security=True;Connect Timeout=30");
-
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+            passInput.PasswordChar = '*';
 
         }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void create_account_Click(object sender, EventArgs e)
         {
             NewAccount newAccount = new NewAccount();
             newAccount.Show();
+            this.Hide();
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void Entrar_Click(object sender, EventArgs e)
         {
@@ -61,30 +39,12 @@ namespace BankSharp
             }
             else
             {
-               
-                /*Con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("select count(*) from AccountTbl where email='" + loginInput.Text + "' and password='" + passInput.Text + "'", Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-
-                /*if (dt.Rows[0][0].ToString() == "1") { 
-                    UserDetails.Username = dt.Rows[0][2].ToString();
-                    MainMenu obj = new MainMenu();
-                    obj.Show();
-                    this.Hide();
-                    Con.Close();
-                }*/
-
-
+              
                 SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\okumu\OneDrive\Documents\BankSharp.mdf;Integrated Security=True;Connect Timeout=30");
-                SqlCommand command = new SqlCommand("SELECT name FROM AccountTbl WHERE email=@email and password=@pass", conn);
-                //SqlCommand commandEmail = new SqlCommand("SELECT email FROM AccountTbl WHERE email=@email and password=@pass", conn);
+                SqlCommand command = new SqlCommand("SELECT A.name,A.email,B.number_account,B.balance,B.credit_card,A.IdUser FROM AccountTbl A JOIN BankAccountTbl B ON B.idUser = A.idUser WHERE A.email=@email and A.password=@pass", conn);
 
                 command.Parameters.AddWithValue("@email", loginInput.Text);
                 command.Parameters.AddWithValue("@pass", passInput.Text);
-
-                /*commandEmail.Parameters.AddWithValue("@email", loginInput.Text);
-                commandEmail.Parameters.AddWithValue("@pass", passInput.Text);*/
 
                 conn.Open();
 
@@ -93,22 +53,20 @@ namespace BankSharp
                     if (reader.Read())
                     {
                         UserDetails.Username = reader.GetValue(0).ToString();
+                        UserDetails.Email = reader.GetValue(1).ToString();
+                        UserDetails.NumberAccount = reader.GetValue(2).ToString();
+                        UserDetails.Saldo = reader.GetValue(3).ToString();
+                        UserDetails.Cardsaldo = reader.GetValue(4).ToString();
+                        UserDetails.UserId = reader.GetValue(5).ToString();
                         MainMenu obj = new MainMenu();
                         obj.Show();
                         this.Hide();
                         conn.Close();
+                    } else
+                    {
+                        MessageBox.Show("Senha ou login estão incorretos");
                     }
                 }
-
-                /*using (SqlDataReader reader = commandEmail.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        UserDetails.Useremail = reader.GetValue(1).ToString();
-                    }
-                }*/
-
-
 
             }
 

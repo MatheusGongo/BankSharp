@@ -22,31 +22,6 @@ namespace BankSharp
             timer1.Start();
         }
 
-        private void guna2PictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2ProgressBar1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         int startP = 0;
 
         private void timer1_Tick(object sender, EventArgs e)

@@ -69,7 +69,6 @@
             this.Myprogressbar.Size = new System.Drawing.Size(314, 22);
             this.Myprogressbar.TabIndex = 4;
             this.Myprogressbar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.Myprogressbar.ValueChanged += new System.EventHandler(this.guna2ProgressBar1_ValueChanged);
             // 
             // guna2PictureBox3
             // 

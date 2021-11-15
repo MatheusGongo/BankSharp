@@ -57,7 +57,6 @@
             this.loginInput.Name = "loginInput";
             this.loginInput.Size = new System.Drawing.Size(283, 35);
             this.loginInput.TabIndex = 4;
-            this.loginInput.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // passInput
             // 
@@ -68,7 +67,6 @@
             this.passInput.Name = "passInput";
             this.passInput.Size = new System.Drawing.Size(283, 35);
             this.passInput.TabIndex = 5;
-            this.passInput.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Entrar
             // 

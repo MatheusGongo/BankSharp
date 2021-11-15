@@ -15,7 +15,10 @@ namespace BankSharp
         public MainMenu()
         {
             InitializeComponent();
-            userName.Text = UserDetails.Username;
+            balance.Text = "R$ " + UserDetails.Saldo.ToString();
+            creditSaldo.Text = "R$ " + UserDetails.Cardsaldo.ToString();
+            welcomeText.Text = "Olá, " + UserDetails.Username + " :D";
+
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
@@ -70,7 +73,9 @@ namespace BankSharp
 
         private void addMoney_Click(object sender, EventArgs e)
         {
-
+            AddBalance obj = new AddBalance();
+            obj.Show();
+            this.Hide();
         }
 
         private void userName_Click(object sender, EventArgs e)
@@ -83,6 +88,23 @@ namespace BankSharp
             Payment obj = new Payment();
             obj.Show();
             this.Hide();
+        }
+
+        private void to_transfer_Click(object sender, EventArgs e)
+        {
+            Transfer obj = new Transfer();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void guna2ImageButton1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void guna2ImageButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
